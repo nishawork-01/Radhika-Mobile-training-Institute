@@ -1,0 +1,97 @@
+@use 'variables' as *;
+@use "sass:color";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-body;
+  color: $text-dark;
+  background-color: $white;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-headings;
+  font-weight: 700;
+  color: $primary-dark-blue;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+}
+
+.btn-primary {
+  background-color: $accent-gold;
+  color: $primary-dark-blue;
+  padding: 12px 28px;
+  border-radius: $radius-sm;
+  font-weight: 600;
+  display: inline-block;
+  
+  &:hover {
+    background-color: color.adjust($accent-gold, $lightness: -10%);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 204, 0, 0.3);
+  }
+}
+
+section {
+  padding: $spacing-xl 0;
+  
+  @media (max-width: $breakpoint-tablet) {
+    padding: $spacing-lg 0;
+  }
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: $spacing-lg;
+  
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    
+    @media (max-width: $breakpoint-tablet) {
+      font-size: 2rem;
+    }
+  }
+  
+  p {
+    color: $text-muted;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

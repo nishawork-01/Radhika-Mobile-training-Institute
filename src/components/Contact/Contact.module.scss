@@ -1,0 +1,108 @@
+@use '../../styles/variables' as *;
+
+.contact {
+  background-color: $light-gray;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: $spacing-xl;
+  align-items: flex-start;
+  
+  @media (max-width: $breakpoint-tablet) {
+    grid-template-columns: 1fr;
+    gap: $spacing-lg;
+  }
+}
+
+.info {
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  p {
+    color: $text-muted;
+    margin-bottom: 3rem;
+  }
+}
+
+.contactItems {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.item {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  
+  .icon {
+    width: 50px;
+    height: 50px;
+    background: $white;
+    color: $accent-gold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: $shadow-soft;
+  }
+  
+  h4 {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+    color: $primary-dark-blue;
+  }
+  
+  p {
+    margin: 0;
+    font-size: 0.95rem;
+  }
+}
+
+.formWrapper {
+  background: $white;
+  padding: $spacing-lg;
+  border-radius: $radius-md;
+  box-shadow: $shadow-bold;
+  
+  @media (max-width: $breakpoint-mobile) {
+    padding: $spacing-md;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.inputGroup {
+  input, textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: $radius-sm;
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    
+    &:focus {
+      outline: none;
+      border-color: $accent-gold;
+      box-shadow: 0 0 0 3px $accent-gold-soft;
+    }
+  }
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 15px;
+}

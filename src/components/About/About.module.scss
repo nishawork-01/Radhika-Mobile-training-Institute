@@ -1,0 +1,96 @@
+@use '../../styles/variables' as *;
+
+.about {
+  background-color: $light-gray;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $spacing-xl;
+  align-items: center;
+  
+  @media (max-width: $breakpoint-tablet) {
+    grid-template-columns: 1fr;
+    gap: $spacing-lg;
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  
+  img {
+    border-radius: $radius-md;
+    box-shadow: $shadow-bold;
+  }
+}
+
+.experienceBadge {
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  background: $accent-gold;
+  color: $white;
+  padding: 20px;
+  border-radius: $radius-md;
+  text-align: center;
+  box-shadow: $shadow-bold;
+  
+  span {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1;
+  }
+  
+  p {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  @media (max-width: $breakpoint-mobile) {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+.content {
+  .subtitle {
+    color: $accent-gold;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 1rem;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+    
+    @media (max-width: $breakpoint-tablet) {
+      font-size: 2rem;
+    }
+  }
+  
+  p {
+    color: $text-muted;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+  }
+}
+
+.features {
+  margin-bottom: 2rem;
+  
+  li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+}

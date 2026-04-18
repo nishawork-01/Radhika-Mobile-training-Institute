@@ -1,0 +1,104 @@
+@use '../../styles/variables' as *;
+
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 700px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  color: $white;
+  padding: 0;
+  
+  @media (max-width: $breakpoint-tablet) {
+    min-height: 600px;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0, 31, 63, 0.9) 0%, rgba(0, 31, 63, 0.4) 100%);
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  
+  h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    color: $white;
+    margin-bottom: 2rem;
+    
+    span {
+      color: $accent-gold;
+    }
+    
+    @media (max-width: $breakpoint-tablet) {
+      font-size: 3rem;
+    }
+    
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 2.5rem;
+    }
+  }
+
+  .expBadge {
+    display: inline-block;
+    background: $accent-gold-soft;
+    color: $accent-gold;
+    padding: 8px 16px;
+    border-radius: $radius-sm;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 204, 0, 0.2);
+    
+    strong {
+      color: $white;
+      font-size: 1.1rem;
+    }
+  }
+  
+  p {
+    font-size: 1.25rem;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+    max-width: 600px;
+    
+    @media (max-width: $breakpoint-tablet) {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+.actions {
+  display: flex;
+  gap: 20px;
+  
+  @media (max-width: $breakpoint-mobile) {
+    flex-direction: column;
+  }
+}
+
+.btnSecondary {
+  border: 2px solid $white;
+  color: $white;
+  padding: 12px 28px;
+  border-radius: $radius-sm;
+  font-weight: 600;
+  display: inline-block;
+  
+  &:hover {
+    background: $white;
+    color: $primary-dark-blue;
+    transform: translateY(-2px);
+  }
+}

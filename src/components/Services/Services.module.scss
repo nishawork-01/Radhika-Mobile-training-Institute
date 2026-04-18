@@ -1,0 +1,66 @@
+@use '../../styles/variables' as *;
+
+.services {
+  background-color: $white;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $spacing-md;
+  
+  @media (max-width: $breakpoint-desktop) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (max-width: $breakpoint-mobile) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  padding: $spacing-lg;
+  background: $light-gray;
+  border-radius: $radius-md;
+  text-align: center;
+  transition: all 0.3s ease;
+  border-bottom: 4px solid transparent;
+  
+  &:hover {
+    transform: translateY(-10px);
+    background: $white;
+    box-shadow: $shadow-bold;
+    border-bottom-color: $accent-gold;
+    
+    .iconBox {
+      background: $accent-gold;
+      color: $primary-dark-blue;
+    }
+  }
+  
+  .iconBox {
+    width: 70px;
+    height: 70px;
+    background: $white;
+    color: $accent-gold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: $shadow-soft;
+  }
+  
+  h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: $primary-dark-blue;
+  }
+  
+  p {
+    color: $text-muted;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}

@@ -1,0 +1,64 @@
+@use '../../styles/variables' as *;
+
+.whyChooseUs {
+  background-color: $primary-dark-blue;
+  color: $white;
+  
+  :global(.section-title) {
+    h2 {
+      color: $white;
+    }
+    p {
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $spacing-md;
+  
+  @media (max-width: $breakpoint-desktop) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (max-width: $breakpoint-mobile) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.featureCard {
+  background: rgba(255, 255, 255, 0.05);
+  padding: $spacing-md;
+  border-radius: $radius-md;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+    border-color: $accent-gold;
+  }
+  
+  .iconBox {
+    color: $accent-gold;
+    margin-bottom: 1.5rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  h3 {
+    color: $white;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
