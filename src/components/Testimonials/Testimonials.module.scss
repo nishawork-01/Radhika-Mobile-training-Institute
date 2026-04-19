@@ -1,0 +1,112 @@
+@use '../../styles/variables' as *;
+
+.testimonials {
+  background-color: $light-gray;
+}
+
+.carouselContainer {
+  margin-top: $spacing-lg;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  gap: $spacing-md;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: $spacing-md;
+  scrollbar-width: thin;
+  scrollbar-color: $accent-gold transparent;
+  
+  &::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background-color: $accent-gold;
+    border-radius: 20px;
+  }
+}
+
+.card {
+  flex: 0 0 calc(33.333% - ($spacing-md * 2 / 3));
+  min-width: 300px;
+  background: $white;
+  padding: $spacing-md;
+  border-radius: $radius-md;
+  box-shadow: $shadow-soft;
+  scroll-snap-align: start;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 4px solid transparent;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $shadow-bold;
+    border-top: 4px solid $accent-gold;
+  }
+}
+
+.rating {
+  margin-bottom: $spacing-sm;
+  display: flex;
+  gap: 4px;
+}
+
+.quoteIcon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  opacity: 0.1;
+  color: $primary-dark-blue;
+}
+
+.text {
+  font-size: 1.05rem;
+  font-style: italic;
+  color: $text-muted;
+  margin-bottom: $spacing-md;
+  line-height: 1.6;
+}
+
+.studentInfo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  
+  .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid $accent-gold;
+  }
+  
+  h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: $primary-dark-blue;
+  }
+  
+  span {
+    font-size: 0.9rem;
+    color: $text-muted;
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .card {
+    flex: 0 0 calc(50% - ($spacing-md / 2));
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .card {
+    flex: 0 0 85%;
+  }
+}

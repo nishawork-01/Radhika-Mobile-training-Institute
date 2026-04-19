@@ -1,6 +1,7 @@
 import React from 'react';
 import { Facebook, Instagram, Twitter, Youtube, ArrowRight } from 'lucide-react';
 import styles from './Footer.module.scss';
+import logo from '../../assets/logo.png';
 
 const Footer = () => {
   return (
@@ -9,8 +10,8 @@ const Footer = () => {
         <div className={styles.grid}>
           <div className={styles.brand}>
             <div className={styles.logo}>
-              <div className={styles.logoPlaceholder}>RM</div>
-              <span>Radhika Mobile</span>
+              <img src={logo} alt="Radhika Mobile Institute" style={{ width: '40px', height: '40px', borderRadius: '50%' }} />
+              <span>Radhika Mobile Training Institute</span>
             </div>
             <p>
               Leading technical training institute in Gorakhpur. Empowering the next 
@@ -21,7 +22,7 @@ const Footer = () => {
               <a href="https://www.facebook.com/" target="_blank"><Facebook size={18} /></a>
               <a href="https://www.instagram.com/" target="_blank"><Instagram size={18} /></a>
               <a href="https://www.twitter.com/" target="_blank"><Twitter size={18} /></a>
-              <a href="https://www.youtube.com/@radhikamobilegorakhpur" target="_blank"><Youtube size={18} /></a>
+              <a href="https://www.youtube.com/@radhikagmobilegorakhpur" target="_blank"><Youtube size={18} /></a>
             </div>
           </div>
           

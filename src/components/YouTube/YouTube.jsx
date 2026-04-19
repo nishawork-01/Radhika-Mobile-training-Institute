@@ -15,9 +15,15 @@ const YouTube = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className={styles.badge}>
+            <a 
+              href="https://www.youtube.com/@radhikagmobilegorakhpur"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.badge}
+              style={{ textDecoration: 'none' }}
+            >
               <Youtube size={16} /> <span>YouTube Channel</span>
-            </div>
+            </a>
             <h2>Learn Technical Skills Online with Our Experts</h2>
             <p>
               Subscribe to our YouTube channel **Radhika Mobile Gorakhpur** for 
@@ -37,7 +43,7 @@ const YouTube = () => {
             </div>
             
             <a 
-              href="https://www.youtube.com/@radhikamobilegorakhpur" 
+              href="https://www.youtube.com/@radhikagmobilegorakhpur" 
               target="_blank" 
               rel="noopener noreferrer" 
               className={styles.ytBtn}
@@ -57,7 +63,7 @@ const YouTube = () => {
               <iframe 
                 width="100%" 
                 height="315" 
-                src="https://www.youtube.com/embed/videoseries?list=UU6z5tZ0t_9y9xG7p9K5rP9A" 
+                src="https://www.youtube.com/embed/tmo7TaOyFq0?si=lJFqQP_S_C1_o2Un" 
                 title="Radhika Mobile Tutorials" 
                 frameBorder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 

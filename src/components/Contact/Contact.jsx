@@ -37,7 +37,7 @@ const Contact = () => {
                 <div className={styles.icon}><MapPin size={20} /></div>
                 <div>
                   <h4>Visit Us</h4>
-                  <p>Vijay Chowk, In Front of Hotel San Plaza, Khoya Mandi Gali, Golghar, Gorakhpur, UP - 273001</p>
+                  <p>Radhika Mobile Gorakhpur, Vijay Chowk, Golghar, Gorakhpur, Uttar Pradesh 273001</p>
                 </div>
               </div>
             </div>

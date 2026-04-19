@@ -26,7 +26,7 @@ const Map = () => {
                 <MapPin size={24} className={styles.icon} />
                 <div>
                   <h4>Our Address</h4>
-                  <p>Vijay Chowk, In Front of Hotel San Plaza, Khoya Mandi Gali, Golghar, Gorakhpur, UP - 273001</p>
+                  <p>Radhika Mobile Gorakhpur, Vijay Chowk, Golghar, Gorakhpur, Uttar Pradesh 273001</p>
                 </div>
               </div>
               
@@ -46,6 +46,14 @@ const Map = () => {
                   <p>Sunday: Weekly Off</p>
                 </div>
               </div>
+
+              <button 
+                className={`btn-primary ${styles.directionsBtn}`}
+                onClick={() => window.open('https://www.google.com/maps/dir//Radhika+Mobile+Gorakhpur,+Vijay+Chowk,+Golghar,+Gorakhpur,+Uttar+Pradesh+273001/', '_blank')}
+                style={{ width: '100%', marginTop: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '10px' }}
+              >
+                <MapPin size={18} /> Get Directions
+              </button>
             </div>
           </motion.div>
           
@@ -56,8 +64,13 @@ const Map = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
+            <div 
+              className={styles.mapOverlay} 
+              onClick={() => window.open('https://www.google.com/maps/dir//Radhika+Mobile+Gorakhpur,+Vijay+Chowk,+Golghar,+Gorakhpur,+Uttar+Pradesh+273001/', '_blank')}
+              title="Click for Directions"
+            ></div>
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3563.024843948767!2d83.3687399752174!3d26.746014976747283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399145610ec16301%3A0xe7bf40049909241b!2sRadhika%20Mobile%20Training%20Institute!5e0!3m2!1sen!2sin!4v1713220000000!5m2!1sen!2sin" 
+              src="https://maps.google.com/maps?q=Radhika%20Mobile%20Gorakhpur,%20Vijay%20Chowk,%20Golghar,%20Gorakhpur,%20Uttar%20Pradesh%20273001&t=&z=16&ie=UTF8&iwloc=&output=embed" 
               width="100%" 
               height="450" 
               style={{ border: 0 }} 

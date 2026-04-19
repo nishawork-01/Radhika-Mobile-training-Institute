@@ -58,10 +58,27 @@
 }
 
 .mapWrapper {
+  position: relative;
   border-radius: $radius-md;
   overflow: hidden;
   box-shadow: $shadow-bold;
   height: 450px;
+  
+  .mapOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0);
+    transition: background 0.3s ease;
+    
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
   
   iframe {
     width: 100%;

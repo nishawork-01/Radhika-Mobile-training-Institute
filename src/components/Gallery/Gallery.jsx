@@ -5,28 +5,36 @@ import styles from './Gallery.module.scss';
 const Gallery = () => {
   const images = [
     {
-      url: "https://images.unsplash.com/photo-1597733336794-12d05021d510?auto=format&fit=crop&q=80&w=800",
-      title: "Advanced Lab"
+      url: "https://radhikamobile.com/wp-content/uploads/2025/04/3.png",
+      title: "Digital Class"
     },
     {
-      url: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=800",
-      title: "Microscope Repairing"
+      url: "https://radhikamobile.com/wp-content/uploads/2025/04/5.png",
+      title: "Live Practical"
     },
     {
-      url: "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&q=80&w=800",
-      title: "Motherboard Diagnostics"
+      url: "https://radhikamobile.com/wp-content/uploads/2025/04/8.png",
+      title: "Hostel Facility"
     },
     {
-      url: "https://images.unsplash.com/photo-1517077147496-d28235863953?auto=format&fit=crop&q=80&w=800",
-      title: "Soldering Station"
+      url: "https://radhikamobile.com/wp-content/uploads/2025/04/1.png",
+      title: "Updated Tools"
     },
     {
-      url: "https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&q=80&w=800",
-      title: "Software Flashing"
+      url: "https://radhikamobile.com/wp-content/uploads/2025/04/6.png",
+      title: "Zoom Supports"
     },
     {
-      url: "https://images.unsplash.com/photo-1550009158-9ebf69173e03?auto=format&fit=crop&q=80&w=800",
-      title: "Training Center"
+      url: "https://radhikamobile.com/wp-content/uploads/2025/04/7.png",
+      title: "Night Extra Class"
+    },
+    {
+      url: "https://radhikamobile.com/wp-content/uploads/2025/04/4.png",
+      title: "Limited Seats"
+    },
+    {
+      url: "https://radhikamobile.com/wp-content/uploads/2025/04/2.png",
+      title: "Certificate"
     }
   ];
 
